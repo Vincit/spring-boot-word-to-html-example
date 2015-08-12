@@ -9,12 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  *  This controller provides the public API that is used to transform Word documents
  *  into HTML documents.
+ *
+ *  @author Petri Kainulainen
  */
 @RestController
 public class WordToHtmlController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WordToHtmlController.class);
 
+    /**
+     * Transforms the Word document into HTML document and returns the transformed document.
+     *
+     * @return  The content of the uploaded document as HTML.
+     */
     @RequestMapping(value = "/api/word-to-html", method = RequestMethod.POST)
     public String convertWordDocumentIntoHtmlDocument() {
         LOGGER.info("Converting word document into html document");
