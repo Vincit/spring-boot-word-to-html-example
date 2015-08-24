@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-public class WordToHtmlApplication {
+class WordToHtmlApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(WordToHtmlApplication.class, args);
